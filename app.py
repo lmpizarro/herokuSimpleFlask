@@ -1,11 +1,11 @@
 import os
 from flask import Flask
 from flask import render_template 
-from flask import  send_from_directory
+from flask import send_from_directory
 from flask import session
-from flask import  request
-from flask import  redirect
-from flask import  url_for
+from flask import request
+from flask import redirect
+from flask import url_for
 
 # initialization
 USERNAME = 'admin@pepe.com'
@@ -13,6 +13,7 @@ PASSWORD = 'default'
 
 app = Flask(__name__)
 app.config.from_object(__name__)
+
 app.config.update(
     DEBUG = True,
     SECRET_KEY = 'development key',
