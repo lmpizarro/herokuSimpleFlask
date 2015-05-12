@@ -8,7 +8,7 @@ from flask import  redirect
 from flask import  url_for
 
 # initialization
-USERNAME = 'admin'
+USERNAME = 'admin@pepe.com'
 PASSWORD = 'default'
 
 app = Flask(__name__)
