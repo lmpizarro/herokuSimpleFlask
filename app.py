@@ -8,9 +8,9 @@ app.config.update(
 )
 
 # controllers
-@app.route("/")
-def hello():
-    return "Hello from Python!"
+#@app.route("/")
+#def hello():
+#    return "Hello from Python!"
 
 
 # controllers
