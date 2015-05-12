@@ -13,7 +13,6 @@ def hello():
     return "Hello from Python!"
 
 
-
 # controllers
 @app.route('/favicon.ico')
 def favicon():
