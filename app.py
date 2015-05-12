@@ -1,10 +1,21 @@
 import os
-from flask import Flask, render_template, send_from_directory
+from flask import Flask
+from flask import render_template 
+from flask import  send_from_directory
+from flask import session
+from flask import  request
+from flask import  redirect
+from flask import  url_for
 
 # initialization
+USERNAME = 'admin'
+PASSWORD = 'default'
+
 app = Flask(__name__)
+app.config.from_object(__name__)
 app.config.update(
     DEBUG = True,
+    SECRET_KEY = 'development key',
 )
 
 # controllers
@@ -26,10 +37,28 @@ def page_not_found(e):
 def index():
     return render_template('index.html')
 
-@app.route("/login")
+@app.route("/login", methods=['GET', 'POST'])
 def login():
-    return render_template('login.html')
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != app.config['USERNAME']:
+            error = 'Invalid username'
+        elif request.form['password'] != app.config['PASSWORD']:
+            error = 'Invalid password'
+        else:
+            session['logged_in'] = True
+            return redirect(url_for('show_entries'))
 
+    return render_template('login.html', error=error)
+
+@app.route("/show_entries")
+def show_entries():
+    return render_template('show_entries.html')
+
+@app.route("/logout")
+def logout():
+    session['logged_in'] = False
+    return render_template('logout.html')
 
 # launch
 if __name__ == "__main__":
