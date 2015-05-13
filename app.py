@@ -61,6 +61,27 @@ def logout():
     session['logged_in'] = False
     return render_template('logout.html')
 
+@app.route("/clean_blog")
+def clean_blog():
+    session['logged_in'] = False
+    return render_template('start_boot_strap/clean_blog/index.html')
+
+@app.route("/clean_blog_about")
+def clean_blog_about():
+    session['logged_in'] = False
+    return render_template('start_boot_strap/clean_blog/about.html')
+
+@app.route("/clean_blog_post")
+def clean_blog_post():
+    session['logged_in'] = False
+    return render_template('start_boot_strap/clean_blog/post.html')
+
+@app.route("/clean_blog_contact")
+def clean_blog_contact():
+    session['logged_in'] = False
+    return render_template('start_boot_strap/clean_blog/contact.html')
+
+
 # launch
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
