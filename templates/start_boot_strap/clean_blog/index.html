@@ -10,7 +10,7 @@
 
     <div class="post-preview">
        {% for post in posts %}
-          <a href="#">
+          <a href="{{ url_for('clean_blog_post', dbindex=loop.index) }}  ">
            <h2 class="post-title">
              {{ post.title }}
            </h2>
@@ -18,7 +18,7 @@
             {{ post.subtitle|safe }}
            </h3>
           </a>
-          <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on  {{post.date}} </p>
+          <p class="post-meta">Posted by {{post.user}}   on  {{post.date}} </p>
         <hr>
        {% else %}
          <h2 class="post-title">

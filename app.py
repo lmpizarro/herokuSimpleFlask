@@ -65,7 +65,7 @@ def logout():
 db_posts = posts.Posts()
 @app.route("/clean_blog")
 def clean_blog():
-    all_posts = db_posts.posts
+    all_posts = db_posts.get_all()
     return render_template('start_boot_strap/clean_blog/index.html', posts=all_posts)
 
 @app.route("/clean_blog_about")
@@ -73,14 +73,20 @@ def clean_blog_about():
     session['logged_in'] = False
     return render_template('start_boot_strap/clean_blog/about.html')
 
-@app.route("/clean_blog_post")
-def clean_blog_post():
+@app.route('/clean_blog_post/<int:dbindex>')
+def clean_blog_post(dbindex):
     session['logged_in'] = False
-    return render_template('start_boot_strap/clean_blog/post.html')
+    print "dbindex ",dbindex 
+    return render_template('start_boot_strap/clean_blog/post.html', register=db_posts.get_one(dbindex))
 
-@app.route("/clean_blog_contact")
+@app.route("/clean_blog_contact", methods=['GET', 'POST'])
 def clean_blog_contact():
-    session['logged_in'] = False
+    error = None
+    if request.method == 'POST':
+       print request.form['c_name']
+       print request.form['telefono']
+       print request.form['email']
+       print request.form['message']
     return render_template('start_boot_strap/clean_blog/contact.html')
 
 

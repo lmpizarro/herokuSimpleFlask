@@ -58,7 +58,7 @@
                         <a href="{{ url_for('clean_blog_about') }}">About</a>
                     </li>
                     <li>
-                        <a href=" {{ url_for('clean_blog_post') }}">Sample Post</a>
+                        <a href=" {{ url_for('clean_blog_post', dbindex=0) }}">Sample Post</a>
                     </li>
                     <li>
                         <a href="  {{ url_for('clean_blog_contact') }} ">Contact</a>
@@ -74,7 +74,6 @@
     <!-- Set your background image for this header on the line below. -->
     {% block imageheader %}
     <header class="intro-header" style="background-image: url({{ url_for('static', filename='img/home-bg.jpg') }})">
-    {% endblock %}
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -88,6 +87,7 @@
         </div>
     </header>
 
+    {% endblock %}
     <!-- Main Content -->
     <div class="container">
       {% block content %}
@@ -139,7 +139,7 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="{{ url_for('static', filename ='js/clean-blog.min.js')}}"></script>
+    <script src="{{ url_for('static', filename ='js/clean-blog.js')}}"></script>
 
 </body>
 

@@ -4,8 +4,32 @@
 
     {% block imageheader %}
     <header class="intro-header" style="background-image: url({{ url_for('static', filename='img/post-bg.jpg') }})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h2>{{ register.title}}</h1>
+                        <h3> {{  register.subtitle}} </h2>
+                        <span class="meta">Posted by {{register.user}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
     {% endblock %}
  
 {% block content %}
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
+                  <p> {{register.content}} </p>
+ 
+                </div>
+            </div>
+        </div>
+    </article>
 {% endblock %}
