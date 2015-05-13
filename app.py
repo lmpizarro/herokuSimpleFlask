@@ -85,10 +85,10 @@ def clean_blog_post(dbindex):
 def clean_blog_contact():
     error = None
     if request.method == 'POST':
-       name = request.form['c_name']
-       phone = request.form['telefono']
-       email = request.form['email']
-       mensaje = request.form['message']
+       name = request.form['c_name'].encode("utf-8")
+       phone = request.form['telefono'].encode("utf-8")
+       email = request.form['email'].encode("utf-8")
+       mensaje = request.form['message'].encode("utf-8")
        db_contacts.add_contact(name, phone, email, mensaje)
        return redirect(url_for('clean_blog_thank', contact_name=name))
     return render_template('start_boot_strap/clean_blog/contact.html')
