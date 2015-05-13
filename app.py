@@ -7,6 +7,7 @@ from flask import request
 from flask import redirect
 from flask import url_for
 import posts
+import contacts
 
 # initialization
 USERNAME = 'admin@pepe.com'
@@ -63,6 +64,7 @@ def logout():
     return render_template('logout.html')
 
 db_posts = posts.Posts()
+db_contacts = contacts.Contacts()
 @app.route("/clean_blog")
 def clean_blog():
     all_posts = db_posts.get_all()
@@ -83,11 +85,19 @@ def clean_blog_post(dbindex):
 def clean_blog_contact():
     error = None
     if request.method == 'POST':
-       print request.form['c_name']
-       print request.form['telefono']
-       print request.form['email']
-       print request.form['message']
+       name = request.form['c_name']
+       phone = request.form['telefono']
+       email = request.form['email']
+       mensaje = request.form['message']
+       db_contacts.add_contact(name, phone, email, mensaje)
+       return redirect(url_for('clean_blog_thank', contact_name=name))
     return render_template('start_boot_strap/clean_blog/contact.html')
+
+@app.route('/clean_blog_thank/<contact_name>')
+def clean_blog_thank(contact_name):
+    return render_template('start_boot_strap/clean_blog/thank.html', contact=contact_name)
+
+
 
 
 # launch
