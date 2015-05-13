@@ -6,6 +6,7 @@ from flask import session
 from flask import request
 from flask import redirect
 from flask import url_for
+import posts
 
 # initialization
 USERNAME = 'admin@pepe.com'
@@ -61,10 +62,11 @@ def logout():
     session['logged_in'] = False
     return render_template('logout.html')
 
+db_posts = posts.Posts()
 @app.route("/clean_blog")
 def clean_blog():
-    session['logged_in'] = False
-    return render_template('start_boot_strap/clean_blog/index.html')
+    all_posts = db_posts.posts
+    return render_template('start_boot_strap/clean_blog/index.html', posts=all_posts)
 
 @app.route("/clean_blog_about")
 def clean_blog_about():
