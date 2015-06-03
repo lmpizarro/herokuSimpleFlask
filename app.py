@@ -94,7 +94,7 @@ def clean_blog_thank(contact_name):
 
 @app.route("/responsive")
 def responsive():
-    return render_template('start_boot_strap/responsive/index.html', posts=all_posts)
+    return render_template('start_boot_strap/responsive/index.html')
 
 
 
