@@ -100,9 +100,9 @@ def responsive():
 def vitro_terra():
     return render_template('vitro_terra/index.html')
 
-@app.route("/vitro_terra/contacto")
+@app.route("/vitro_terra_contacto")
 def vitro_terra_contacto():
-    return render_template('vitro_terra/contacto.html')
+    return render_template('vitro_terra/contact.html')
 
 # launch
 if __name__ == "__main__":
