@@ -102,6 +102,7 @@ def vitro_terra():
 
 @app.route("/vitro_terra_contacto")
 def vitro_terra_contacto():
+    ''' '''
     return render_template('vitro_terra/contact.html')
 
 # launch
