@@ -96,7 +96,9 @@ def clean_blog_thank(contact_name):
 def responsive():
     return render_template('start_boot_strap/responsive/index.html')
 
-
+@app.route("/vitro_terra")
+def vitro_terra():
+    return render_template('vitro_terra/index.html')
 
 
 # launch

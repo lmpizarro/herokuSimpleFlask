@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Modern Business - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <!-- Custom CSS -->
+    <link href="{{url_for('static', filename='vitro_terra/css/modern-business.css')}}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{url_for('static', filename='font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+ body{
+	color: #555555;
+	background: #a9a585;
+}
+
+.panel {
+    background: #dedab7
+}
+
+	      .carousel-inner > .item > img,
+	      .carousel-inner > .item > a > img {
+		    width: 640;
+	            margin: auto;
+	    }
+
+	    .carousel-control.right, .carousel-control.left {
+		      background-image:none;
+	      }
+
+#Name { background-color: #a9a585 /*#9e9867*/ ; 
+        padding-top: 5px; 
+        font-family: Arial, Helvetica, sans-serif, Times, serif; 
+        text-align:center; 
+        font-size:12pt; 
+        font-weight: 
+        bold; 
+        color:#dfdfbf /*#434322*/; }
+
+   .style2 {color: #76662B}
+    </style>
+    
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Vitroterra</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+		    <a href="about.html"> <span class="glyphicon glyphicon-unchecked"></span> Qui&eacute;nes somos</a>
+                    </li>
+                    <li>
+		    <a href="services.html"> <span class="glyphicon glyphicon-unchecked"></span>Ba&ntilde;os</a>
+                    </li>
+		    <li>
+                      
+
+                        <a href="contact.html"> <span class="glyphicon glyphicon-unchecked">Decoraci&oacute;n</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">  <span class="glyphicon glyphicon-unchecked"></span>Portfolio <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="portfolio-1-col.html">Im&aacute;genes</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-2-col.html">Ambientaciones</a>
+				</li>
+                            <li>
+                                <a href="portfolio-2-col.html">Exposiciones</a>
+				</li>
+
+
+
+                        </ul>
+                    </li>
+                    <li>
+		    <a href="services.html"> <span class="glyphicon glyphicon-unchecked"></span>Contacto</a>
+                    </li>
+		    <li>
+ 
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Header Carousel -->
+    <header>
+    <div class="row text-center">
+<a href="index.html"><img src="{{url_for('static', filename='vitro_terra/images/fs_files/predefined/logo.gif')}}" alt="Vitroterra :: Bachas de vidrio :: Decoración en vidrio :: Vitrofusión :: " width="910" height="144" border="0" class="Logo_Probar"></a>
+    </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+	   	    
+        <!-- Marketing Icons Section -->
+	<div class="row">
+
+		<div class="col-lg-12">
+      <h4 id="Name" class="row text-center" >Bachas en vidrio vitrofusi&oacute;n - Bachas de apoyo artesanales en vidrio para ba&ntilde;os modernos - Arquitectura y Decoraci&oacute;n</h4>
+		</div>	
+            <div class="col-lg-12">
+               <div id="myCarousel" class="carousel slide"  data-ride="carousel">
+                   <!-- Indicators -->
+                   <ol class="carousel-indicators">
+                       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                       <li data-target="#myCarousel" data-slide-to="1"></li>
+                       <li data-target="#myCarousel" data-slide-to="2"></li>
+                   </ol>
+
+                   <!-- Wrapper for slides -->
+                   <div class="carousel-inner">
+                       <div class="item active">
+                               <img src="{{url_for('static', filename='vitro_terra/images/data9/images/bachadevidriocebra2.jpg')}}" alt="Chania" width="460" height="345"> 
+                           <div class="carousel-caption">
+                           </div>
+                       </div>
+                       <div class="item">
+                               <img src="{{url_for('static', filename='vitro_terra/images/data9/images/7coraznfemenino.jpg')}}" alt="Chania" width="460" height="345"> 
+                           <div class="carousel-caption">
+                           </div>
+                       </div>
+                       <div class="item">
+                               <img src="{{url_for('static', filename='vitro_terra/images/data9/images/bachadevidrioamanda.jpg')}}" alt="Chania" width="460" height="345"> 
+                           <div class="carousel-caption">
+                           </div>
+                       </div>
+                   </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+  </div>
+
+        </div>
+
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Bienvenido a Vitroterra
+                </h1>
+	</div>
+
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="background-color: #a9a585;">
+                        <h4><i class="fa fa-fw fa-check" style="background-color: #dedab7;"></i> Ambientaciones</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <a href="#" class="btn btn-default">M&aacute;s</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="background-color: #a9a585;">
+                        <h4><i class="fa fa-fw fa-gift" style="background-color: #dedab7;"></i> Ba&ntilde;os </h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <!-- a href="#" class="btn btn-default">Learn More</a -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="background-color: #a9a585;">
+                        <h4><i class="fa fa-fw fa-compass" style="background-color: #dedab7;"></i> Decoraci&oacute;n</h4>
+                    </div>
+                    <div class="panel-body">
+			    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                       <em class="Texto_10">Patricia V&aacute;zquez <span class="style2">(15) 4449-2736</span><br /> info@vitroterra.com.ar</em>
+                        <!-- a href="#" class="btn btn-default">Learn More</a-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Portfolio </h2>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="{{url_for('static', filename='vitro_terra/images/data9/images/bachadevidriocolor1.jpg')}}" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="{{url_for('static', filename='vitro_terra/images/data9/images/bachadevidriomoderna.jpg')}}" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="{{url_for('static', filename='vitro_terra/images/data9/images/bachakandinsky2.jpg')}}" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="{{url_for('static', filename='vitro_terra/images/data9/images/baobacha2.jpg')}}" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="{{url_for('static', filename='vitro_terra/images/data9/images/centrodevidrio3.jpg')}}" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="{{url_for('static', filename='vitro_terra/images/data9/images/cmalicia57_g.jpg')}}" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Features Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Objetos en Vitrofusi&oacute;n</h2>
+            </div>
+            <div class="col-md-6">
+                <p>The Modern Business template by Start Bootstrap includes:</p>
+                <ul>
+                    <li><strong>Bootstrap v3.2.0</strong>
+                    </li>
+                    <li>jQuery v1.11.0</li>
+                    <li>Font Awesome v4.1.0</li>
+                    <li>Working PHP contact form with validation</li>
+                    <li>Unstyled page elements for easy customization</li>
+                    <li>17 HTML pages</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="{{url_for('static', filename='vitro_terra/images/data9/images/lasllamasdelavidamail.jpg')}}" alt="">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Call to Action Section -->
+        <div class="well" style="background: #dedab7;">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn btn-lg btn-default btn-block"  style="background: #a9a585;" href="#">Call to Action</a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
+</html>
