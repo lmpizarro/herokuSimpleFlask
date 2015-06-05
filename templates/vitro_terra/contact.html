@@ -145,11 +145,21 @@
             var map = new google.maps.Map(mapCanvas, mapOptions);
 
 
-        var marker = new google.maps.Marker({
-             position: mapOptions.center,
-             map: map,
-             title: 'Hello World!'
-         });
+            var marker = new google.maps.Marker({
+                position: mapOptions.center,
+                map: map,
+                title: 'Vitroterra - Cucha Cucha 2321 -  Buenos Aires, Argentina'
+             });
+
+            var contentString = "<h3> Cucha Cucha 2321</h3>";
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map,marker);
+            });
 
 
         }
