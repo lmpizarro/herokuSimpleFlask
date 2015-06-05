@@ -9,11 +9,9 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Contact
-                    <small>Subheading</small>
-                </h1>
+                <h1 class="page-header">Contacto <small></small> </h1>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a>
+                    <li><a href="{{ url_for('vitro_terra') }}">Home</a>
                     </li>
                     <li class="active">Contact</li>
                 </ol>
@@ -138,7 +136,7 @@
         function initialize() {
             var mapCanvas = document.getElementById('map-canvas');
             var mapOptions = {
-              center: new google.maps.LatLng(-34.602689,-58.459636),
+              center: new google.maps.LatLng(-34.601016,-58.461149),
               zoom: 18,
               mapTypeId: google.maps.MapTypeId.ROADMAP
             }
@@ -152,7 +150,7 @@
              });
 
             var contentString = "<h3> Cucha Cucha 2321</h3>";
-
+            // https://developers.google.com/maps/documentation/javascript/examples/infowindow-simple
             var infowindow = new google.maps.InfoWindow({
                 content: contentString
             });
