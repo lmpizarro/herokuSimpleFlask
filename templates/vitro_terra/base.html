@@ -15,14 +15,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-    {% block extra_style %}
-    {% endblock %}
 
     <!-- Custom CSS -->
     <link href="{{url_for('static', filename='vitro_terra/css/modern-business.css')}}" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="{{url_for('static', filename='font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    {% block extra_style %}
+    {% endblock %}
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -137,9 +139,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    <!-- Leaflet map Core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
 
     <!-- Google map Core JavaScript -->
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <!-- script src="https://maps.googleapis.com/maps/api/js"></script -->
     <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({
