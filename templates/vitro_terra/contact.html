@@ -1,8 +1,5 @@
 {% extends "vitro_terra/base.html" %}
 
-{% block extra_style %}
-{% endblock %}
-
 {% block title  %}
 <title>Contacto</title>
 {% endblock  %}
@@ -142,7 +139,7 @@
             var mapCanvas = document.getElementById('map-canvas');
             var mapOptions = {
               center: new google.maps.LatLng(-34.6, -58.38),
-              zoom: 8,
+              zoom: 13,
               mapTypeId: google.maps.MapTypeId.ROADMAP
             }
             var map = new google.maps.Map(mapCanvas, mapOptions);
@@ -151,5 +148,4 @@
         google.maps.event.addDomListener(window, 'load', initialize);
 
     </script> 
-
 {% endblock   %}
