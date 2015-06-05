@@ -160,7 +160,10 @@
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(map,marker);
             });
+            // google map resizing centering in a marker
             // http://stackoverflow.com/questions/8792676/center-google-maps-v3-on-browser-resize-responsive
+            // http://stackoverflow.com/questions/20517053/centering-google-maps-on-responsive-resize-with-marker
+            //
             var center;
             function calculateCenter() {
               center = map.getCenter();
@@ -170,7 +173,7 @@
               calculateCenter();
             });
             google.maps.event.addDomListener(window, 'resize', function() {
-              map.setCenter(center);
+              map.setCenter(marker.getPosition());
               console.log("setCenter");
             });
 
