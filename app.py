@@ -99,11 +99,11 @@ def responsive():
 @app.route("/vitro_terra")
 def vitro_terra():
     return render_template('vitro_terra/index.html')
-
-@app.route("/vitro_terra/contacto")
+'''
+@app.route("/vitro_terra_contacto")
 def vitro_terra_contacto():
     return render_template('vitro_terra/contact.html')
-
+'''
 # launch
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
