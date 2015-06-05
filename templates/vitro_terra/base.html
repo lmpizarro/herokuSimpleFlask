@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
+    {% block extra_style %}
+    {% endblock %}
+
     <!-- Custom CSS -->
     <link href="{{url_for('static', filename='vitro_terra/css/modern-business.css')}}" rel="stylesheet">
 
@@ -134,5 +137,7 @@
         interval: 5000 //changes the speed
     })
     </script>
+    {% block extra_js  %}
+    {% endblock   %}
 </body>
 </html>
