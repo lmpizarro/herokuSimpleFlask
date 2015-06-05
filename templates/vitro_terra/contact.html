@@ -164,12 +164,14 @@
             var center;
             function calculateCenter() {
               center = map.getCenter();
+              console.log("calculateCenter");
             }
             google.maps.event.addDomListener(map, 'idle', function() {
               calculateCenter();
             });
             google.maps.event.addDomListener(window, 'resize', function() {
               map.setCenter(center);
+              console.log("setCenter");
             });
 
         }
